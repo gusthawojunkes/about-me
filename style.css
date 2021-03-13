@@ -1,7 +1,18 @@
 :root {
-    --bg-dark-color: #191919;
-    --font-dark-color: #fff;
-    --box-dark-color: #252525;
+    /* General */
+    --pure-black: #000;
+    --pure-white: #FFF;
+
+    /* Backgrounds */
+    --bg-dark-color: #2C2F33;
+    --box-dark-color: #23272A;
+
+    /* Fonts */
+    --font-dark-color: #FFF;
+
+    /* Icons */
+    --discord-color: #7289DA;
+    --linkedin-color: #0E76A8;
 }
 
 * {
@@ -9,12 +20,16 @@
     margin: 0;
 }
 
-.container{
+.container {
     padding: 0.01em 12%;
 }
 
 .text-center {
     text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .center {
@@ -58,7 +73,7 @@
     font-family: 'Recursive', sans-serif;
 }
 
-.title-chevron{
+.title-chevron {
     padding-top: 0.1em;
     padding-bottom: 0.3em;
 }
@@ -75,23 +90,71 @@
     grid-template-columns: 33% 33% 33%;
 }
 
-#linkedin {
+.list li {
+    list-style: none;
+}
 
+.rotate {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.rotate-content:hover .rotate {
+    transform: rotateY(180deg);
+}
+
+#front, #back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#back {
+    transform: rotateY(180deg);
+}
+
+#front, #back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+#discord-tag {
+    padding-top: 1.8em;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+#discord-tag p{
+    background-color: var(--discord-color);
+}
+
+#linkedin {
+    color: var(--linkedin-color);
 }
 
 #discord {
-    
+    color: var(--discord-color);
 }
 
 #github {
+    color: var(--pure-white);
+}
 
+#language {
+    margin: 0.8em;
+    font-size: 1.1em;
 }
 
 /* Mobile First */
-@media(max-width: 600px){
+@media(max-width: 600px) {
 
 }
 
 /* Desktop */
-@media(min-width: 850px){
+@media(min-width: 850px) {
+
 }

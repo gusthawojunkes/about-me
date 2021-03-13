@@ -1,0 +1,97 @@
+:root {
+    --bg-dark-color: #191919;
+    --font-dark-color: #fff;
+    --box-dark-color: #252525;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    padding: 0.01em 12%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+}
+
+.name-heading {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.1em;
+    text-transform: uppercase;
+}
+
+.dark {
+    background: var(--bg-dark-color);
+    color: var(--font-dark-color);
+}
+
+.default-spacing {
+    margin: 1em;
+}
+
+.content-box {
+    width: 100%;
+    background: var(--box-dark-color);
+    border: 0.5px solid var(--font-dark-color);
+    border-radius: 15px;
+	box-shadow: 7px 5px 3px var(--box-dark-color);
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: left;
+    padding: 0.7em 0.9em;
+}
+
+.box-title {
+    width: 100%;
+    font-size: 1.2em;
+    padding-bottom: 0.3em;
+    font-family: 'Recursive', sans-serif;
+}
+
+.title-chevron{
+    padding-top: 0.1em;
+    padding-bottom: 0.3em;
+}
+
+.icon-plus-title {
+    display: grid;
+    grid-template-columns: 5% 95%;
+}
+
+.connection-content {
+    width: 80%;
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+#linkedin {
+
+}
+
+#discord {
+    
+}
+
+#github {
+
+}
+
+/* Mobile First */
+@media(max-width: 600px){
+
+}
+
+/* Desktop */
+@media(min-width: 850px){
+}

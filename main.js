@@ -1,8 +1,17 @@
-const ABOUT_POS = 0
-const SCHOOLING_POS = 1
+const CONTENT_POS = [
+    ABOUT_POS = 0,
+    SCHOOLING_POS = 1
+]
 
 getContentByLang = (lang, type) => {
     for (item in lang[type]) document.getElementById(`info-${type}`).innerHTML += `<li>- ${lang[type][item]}</li>`
+}
+
+switchLang = (lang) => {
+    for (index in CONTENT_POS) {
+        document.getElementById(`info-${index}`).innerHTML = ''
+        getContentByLang(lang == 'EN_US' ? EN_US : PT_BR, index)
+    }
 }
 
 const DEFAULT_CONTENT = {
@@ -27,7 +36,7 @@ const EN_US = [
         info3: 'I always prefer the dark theme'
     },
     schooling = {
-        info1: 'In 2020 I started studying Software Engineering at the University "Católica de Santa Catarina"',
+        info1: 'In 2020, I started studying Software Engineering at the University "Católica de Santa Catarina"',
     }
 ]
 
@@ -39,9 +48,8 @@ const PT_BR = [
         info3: 'Eu sempre prefiro o tema escuro'
     },
     schooling = {
-        info1: 'Em 2020 comecei a estudar Engenharia de Software na Universidade Católica de Santa Catarina'
+        info1: 'Em 2020, comecei a estudar Engenharia de Software na Universidade Católica de Santa Catarina'
     }
 ]
 
-getContentByLang(EN_US, ABOUT_POS)
-getContentByLang(EN_US, SCHOOLING_POS)
+for (index in CONTENT_POS) getContentByLang(PT_BR, index)

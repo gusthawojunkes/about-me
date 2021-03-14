@@ -49,7 +49,7 @@
     color: var(--font-dark-color);
 }
 
-.default-spacing {
+.spacing-1 {
     margin: 1em;
 }
 
@@ -147,6 +147,10 @@
 #language {
     margin: 0.8em;
     font-size: 1.1em;
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 /* Mobile First */

@@ -69,4 +69,4 @@ const PT_BR = [
 ]
 
 document.getElementById('nameAndAge').innerHTML += DEFAULT_CONTENT.full_name
-for (index in CONTENT_POS) getContentByLang(PT_BR, index)
+switchLang(EN_US)
